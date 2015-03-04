@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Csi-5115-data-warehouse : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Csi-5115-data-warehouse</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/XinxinZhou/CSI-5115-Data-wareHouse">View on GitHub</a>
+
+          <h1 id="project_title">Csi-5115-data-warehouse</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/XinxinZhou/CSI-5115-Data-wareHouse/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/XinxinZhou/CSI-5115-Data-wareHouse/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>High-Level Data Staging Plan</p>
+
+<p><img src="http://c1.staticflickr.com/9/8619/16508618617_ec4e655c2c_c.jpg" alt=""></p>
+
+<hr>
+
+<p>Summary of ETL Process</p>
+
+<p>National Collision Dimensions</p>
+
+<ul>
+<li>Import the source data into SQL Server 2008 as data staging table.</li>
+<li>Create new tables for target dimension tables [Collision, Vehicle and Passenger].</li>
+<li>Extract the data from data staging table and remove the duplicate data and load into target dimension tables.</li>
+<li>Generate Surrogate keys for dimension tables [Collision, Vehicle and Passenger].</li>
+<li>Perform Null value processing.</li>
+<li>Create lookup table, consisting of the descriptions for metadata.</li>
+</ul>
+
+<p>Date Dimension</p>
+
+<ul>
+<li>Load the Kimball date data (2000-2020) into SQL Server 2008 as date staging table.</li>
+<li>Insert the Date data of the year 1999 into the date staging table.</li>
+<li>Modify the date staging table, remove the date of month column and remove duplicate rows by detecting duplicates in day of week.</li>
+<li>Create target date dimension table and load the data.</li>
+<li>Generate Surrogate keys and replace the natural keys.</li>
+</ul>
+
+<p>Weather Dimension</p>
+
+<ul>
+<li>Load the weather data (Ottawa, Vancouver and Halifax) into SQL Server 2008 as weather dimension table.</li>
+<li>Generate Surrogate keys and process Null value.</li>
+</ul>
+
+<p>Collision Fact Table</p>
+
+<ul>
+<li>Load the source data into SQL Server 2008 as staging table.</li>
+<li>Generate Natural keys.</li>
+<li>Create Surrogate key mapping tables.</li>
+<li>Remove irrelevant columns.</li>
+<li>Replace the natural key with surrogate key using mapping table.</li>
+<li>Load the data into target fact table.</li>
+</ul>
+
+<hr>
+
+<p>Application Template Design</p>
+
+<p><img src="http://c1.staticflickr.com/9/8617/16528658240_ffdfbe6a06_n.jpg" alt=""></p>
+
+<hr>
+
+<p>Application Navigation Framework</p>
+
+<p><img src="http://c1.staticflickr.com/9/8619/16093771304_2401178c12_b.jpg" alt=""></p>
+
+<hr>
+
+<p>GUI Implementation</p>
+
+<ul>
+<li>Technology: JSP, HTML, CSS, JavaScript</li>
+<li>Environment: Eclipse.</li>
+<li>Front-end framework: Bootstrap.</li>
+<li>Data visualization: E-chart JavaScript plugin</li>
+<li>Description:</li>
+<li>We apply Bootstrap to establish our HTML based GUI framework. Besides, JSP is employed to retrieve data from SQL server and populate the data to GUI. In addition, we use E-chart, a JavaScript plugin to implement interactive data visualization.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Csi-5115-data-warehouse maintained by <a href="https://github.com/XinxinZhou">XinxinZhou</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
