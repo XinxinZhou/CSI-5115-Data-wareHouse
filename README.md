@@ -22,7 +22,7 @@
 
 ## High-Level Data Staging Plan
 
-![](http://c1.staticflickr.com/9/8619/16508618617_ec4e655c2c_c.jpg)
+![](http://c2.staticflickr.com/8/7603/16766062571_9496f2f6ef_b.jpg)
 
 
 ***
@@ -64,14 +64,14 @@ Collision Fact Table
 
 ## Application Template Design
 
- ![](http://c1.staticflickr.com/9/8617/16528658240_ffdfbe6a06_n.jpg)
+ ![](http://c1.staticflickr.com/9/8611/16579829370_493bf04f4b_z.jpg)
 
 
 ***
 
 ## Application Navigation Framework
 
-![](http://c1.staticflickr.com/9/8619/16093771304_2401178c12_b.jpg)
+![](http://c1.staticflickr.com/9/8698/16766160662_4fa9b33c4b_b.jpg)
 
 
 
